@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito:wght@300&display=swap');
 
+html,
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #8884FF;
 }
-
-
 
 /*---------------------- Logo Styling*/
 .logohead {
@@ -14,7 +20,10 @@ body {
 .logo {
     font-family: 'Mochiy Pop P One', sans-serif;
     color: #fafafa;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
-
+/*------------------ footer styling */
