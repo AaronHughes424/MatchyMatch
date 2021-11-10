@@ -39,7 +39,7 @@ body {
 }
 
 /*------------------ game menu styling */
-
+#rules-window,
 #game-menu {
     border-style: solid;
     border-radius: 10px;
@@ -61,7 +61,8 @@ body {
     text-decoration: underline;
 }
 
-#game-menu button {
+#game-menu button,
+#rules-window button {
     width: fit-content;
     height: fit-content;
     padding: 0.5rem 1rem;
@@ -72,4 +73,15 @@ body {
     background-color: #5D576B;
     color: #fafafa;
     box-shadow: #555 2px 2px 8px;
+}
+
+/* --------------- Rules window styling */
+
+#rules-window {
+    display: none;
+}
+
+#rules-window p {
+    width: 80%;
+    margin-top: 20px;
 }
