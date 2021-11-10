@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito:wght@300&display=swap');
+
+body {
+    background-color: #8884FF;
+}
+
+
+
+/*---------------------- Logo Styling*/
+.logohead {
+    background-color: #5D576B;
+}
+
+.logo {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #fafafa;
+}
+
+
+
