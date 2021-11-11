@@ -9,13 +9,13 @@
 
 body {
     background-color: #8884FF;
-    height: 100vh;
+
     overflow: hidden;
 }
 
 .container {
-    position: absolute;
-    display: flex;
+    position: relative;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -26,7 +26,7 @@ body {
 /*---------------------- Logo Styling*/
 #logo-head {
     background-color: #5D576B;
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
@@ -54,6 +54,9 @@ body {
     border: none;
     font-family: 'Nunito', sans-serif;
     box-shadow: #5D576B 5px 5px 12px;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #game-menu h1 {
@@ -84,4 +87,32 @@ body {
 #rules-window p {
     width: 80%;
     margin-top: 20px;
+}
+
+
+.card-grid {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+.card {
+    width: 24%;
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    margin-left: 9px;
+    height: 150px;
+    margin-top: 50px;
+}
+
+.card-back {
+    background-color: #000;
+    color: #000;
+}
+
+.card-front {
+    background-color: #FFF;
+    color: green;
 }
