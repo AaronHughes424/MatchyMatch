@@ -12,7 +12,9 @@ window.addEventListener('load', function () {
 
     const menuButton = document.getElementById('menu-button');
 
+    const cardGame = document.getElementById('card-game')
     const cardButtons = document.querySelectorAll('div.card');
+    const exitButton = document.getElementById('exit-button')
 
     let clickEnabled = true;
 
@@ -21,6 +23,7 @@ window.addEventListener('load', function () {
 
     playButton.addEventListener('click', () => {
         gameMenu.style.display = 'none';
+        cardGame.style.display = 'block';
     })
 
     rulesButton.addEventListener('click', () => {
@@ -35,6 +38,11 @@ window.addEventListener('load', function () {
     })
 
     // game function area
+
+    exitButton.addEventListener('click', () => {
+        gameMenu.style.removeProperty('display');
+        cardGame.style.removeProperty('display');
+    })
 
     cardButtons.forEach(function (card) {
         card.addEventListener('click', function () {
@@ -52,7 +60,6 @@ window.addEventListener('load', function () {
             } else {
                 if (secondFlippedCard == null) {
                     secondFlippedCard = card;
-                    console.log('Call Compare cards function');
                     firstFlippedCard = null;
                     secondFlippedCard = null;
                 }
