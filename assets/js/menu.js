@@ -60,6 +60,12 @@ window.addEventListener('load', function () {
             } else {
                 if (secondFlippedCard == null) {
                     secondFlippedCard = card;
+
+                    function (cardClass) {
+                        let cardClass = $('.');
+                        alert(cardClass.length);
+                        if (cardClass.get(0) == cardClass.get(1)) alert("Same");
+                    };
                     firstFlippedCard = null;
                     secondFlippedCard = null;
                 }
