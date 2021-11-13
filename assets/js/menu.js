@@ -60,19 +60,13 @@ window.addEventListener('load', function () {
             } else {
                 if (secondFlippedCard == null) {
                     secondFlippedCard = card;
-
-                    function (cardClass) {
-                        let cardClass = $('.');
-                        alert(cardClass.length);
-                        if (cardClass.get(0) == cardClass.get(1)) alert("Same");
-                    };
                     firstFlippedCard = null;
                     secondFlippedCard = null;
                 }
             }
             setTimeout(function () {
                 card.classList.remove('card-back');
-                card.classList.add('card-front');
+                card.classList.add('card-face');
                 clickEnabled = true;
             }, 500);
         }

@@ -112,16 +112,16 @@ body {
     position: relative;
     background-size: cover;
     margin-left: 50px;
-    height: 150px;
+    height: 160px;
     margin-top: 50px;
 }
 
 .card-back {
-    background-color: #000;
+    background-image: url(../images/cardBack.jpg);
     color: #000;
 }
 
-.card-front {
-    background-color: #FFF;
+.a {
+    background-image: url(../images/Circle.png);
     color: green;
 }
