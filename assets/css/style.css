@@ -57,7 +57,7 @@ body {
     margin-left: 10%;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 20% 10%;
+    padding: 15% 10%;
 }
 
 #game-menu h1 {
@@ -98,10 +98,11 @@ body {
     display: none;
     width: 100%;
     position: relative;
+    margin-left: 3%;
 }
 
 .exit-button {
-    margin-left: 48%;
+    margin-left: 45%;
     margin-top: 20px;
 }
 
