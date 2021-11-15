@@ -26,7 +26,6 @@ window.addEventListener('load', function () {
         exitButton.style.display = 'flex';
 
         shuffle();
-        resetBoard();
     })
 
     rulesButton.addEventListener('click', () => {
@@ -46,7 +45,11 @@ window.addEventListener('load', function () {
         gameMenu.style.removeProperty('display');
         cardGame.style.removeProperty('display');
         exitButton.style.removeProperty('display');
-    })
+
+        for (i = 0; i < cards.length; i++) {
+            cards[i].classList.remove('flip');
+        };
+    });
 
     function flipCard() {
         if (lockBoard) return;
