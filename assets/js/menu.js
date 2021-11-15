@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
         cardGame.style.display = 'flex';
         exitButton.style.display = 'flex';
 
+        startFunction();
         shuffle();
     })
 
@@ -46,9 +47,7 @@ window.addEventListener('load', function () {
         cardGame.style.removeProperty('display');
         exitButton.style.removeProperty('display');
 
-        for (i = 0; i < cards.length; i++) {
-            cards[i].classList.remove('flip');
-        };
+        resetCards();
     });
 
     function flipCard() {
@@ -101,6 +100,14 @@ window.addEventListener('load', function () {
         });
     };
 
-    cards.forEach(card => card.addEventListener('click', flipCard));
+    function resetCards() {
+        for (i = 0; i < cards.length; i++) {
+            cards[i].classList.remove('flip');
+            console.log('testing')
+        };
+    }
 
+    function startFunction() {
+        cards.forEach(card => card.addEventListener('click', flipCard));
+    }
 });
