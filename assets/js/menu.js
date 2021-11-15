@@ -22,7 +22,11 @@ window.addEventListener('load', function () {
 
     playButton.addEventListener('click', () => {
         gameMenu.style.display = 'none';
-        cardGame.style.display = 'block';
+        cardGame.style.display = 'flex';
+        exitButton.style.display = 'flex';
+
+        shuffle();
+        resetBoard();
     })
 
     rulesButton.addEventListener('click', () => {
@@ -41,6 +45,7 @@ window.addEventListener('load', function () {
     exitButton.addEventListener('click', () => {
         gameMenu.style.removeProperty('display');
         cardGame.style.removeProperty('display');
+        exitButton.style.removeProperty('display');
     })
 
     function flipCard() {
@@ -51,26 +56,24 @@ window.addEventListener('load', function () {
         if (!flippedCard) {
             flippedCard = true;
             firstCard = this;
-        } else {
-            flippedCard = false;
-            secondCard = this;
-            checkMatch();
+
+            return;
         }
+        secondCard = this;
+        checkMatch();
+
     }
 
     function checkMatch() {
-        if (firstCard.dataset.compare === secondCard.dataset.compare) {
-            disableCards();
-        } else {
-            unflipCards();
-        }
+        let matches = firstCard.dataset.compare === secondCard.dataset.compare;
+        matches ? disableCards() : unflipCards();
     }
 
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
 
-        resetBoard()
+        resetBoard();
     }
 
     function unflipCards() {
@@ -78,21 +81,23 @@ window.addEventListener('load', function () {
         setTimeout(() => {
             firstCard.classList.remove('flip');
             secondCard.classList.remove('flip');
-            lockBoard = false;
+
+            resetBoard();
         }, 1500);
     }
 
     function resetBoard() {
-        [flipCard, lockBoard] = [false, false];
+        [flippedCard, lockBoard] = [false, false];
         [firstCard, secondCard] = [null, null];
     }
 
-    (function randomise() {
+    function shuffle() {
         cards.forEach(card => {
             let randomPos = Math.floor(Math.random() * 12);
             card.style.order = randomPos;
         });
-    })();
+    };
+
     cards.forEach(card => card.addEventListener('click', flipCard));
 
 });

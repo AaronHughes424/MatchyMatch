@@ -95,11 +95,13 @@ body {
 
 #exit-button {
     margin-left: 20px;
+    display: none;
 }
 
 
 .card-grid {
     display: none;
+    flex-wrap: wrap;
     width: 100%;
     position: relative;
     max-width: 1200px;
