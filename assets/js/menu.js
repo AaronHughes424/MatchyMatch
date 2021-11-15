@@ -74,7 +74,9 @@ window.addEventListener('load', function () {
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
-
+        firstCard.classList.add('matched');
+        secondCard.classList.add('matched');
+        checkGameOver();
         resetBoard();
     }
 
@@ -109,5 +111,15 @@ window.addEventListener('load', function () {
 
     function startFunction() {
         cards.forEach(card => card.addEventListener('click', flipCard));
+    }
+
+    function checkGameOver() {
+        let matched = 0;
+        cards.forEach(card => {
+            if (card.classList.value.includes('matched')) {}
+        });
+        if (matched >= cards.length) {
+            exitButton.click();
+        }
     }
 });
