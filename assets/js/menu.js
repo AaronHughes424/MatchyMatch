@@ -16,6 +16,10 @@ window.addEventListener('load', function () {
     const exitButton = document.getElementById('exit-button')
     const cards = document.querySelectorAll('.card');
 
+    const winMenu = document.getElementById('win')
+    const menuButton2 = document.getElementById('menu-button2')
+    const playAgain = document.getElementById('play-button2')
+
     let flippedCard = false;
     let lockBoard = false;
     let firstCard, secondCard;
@@ -25,6 +29,7 @@ window.addEventListener('load', function () {
         cardGame.style.display = 'flex';
         exitButton.style.display = 'flex';
 
+        removeMatched();
         startFunction();
         shuffle();
     })
@@ -46,9 +51,18 @@ window.addEventListener('load', function () {
         gameMenu.style.removeProperty('display');
         cardGame.style.removeProperty('display');
         exitButton.style.removeProperty('display');
+        removeMatched();
+        resetCards();
+    });
+
+    menuButton2.addEventListener('click', () => {
+        gameMenu.style.removeProperty('display');
+        winMenu.style.removeProperty('display')
+        exitButton.style.removeProperty('display');
 
         resetCards();
     });
+
 
     function flipCard() {
         if (lockBoard) return;
@@ -105,7 +119,6 @@ window.addEventListener('load', function () {
     function resetCards() {
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.remove('flip');
-            console.log('testing')
         };
     }
 
@@ -116,10 +129,25 @@ window.addEventListener('load', function () {
     function checkGameOver() {
         let matched = 0;
         cards.forEach(card => {
-            if (card.classList.value.includes('matched')) {}
+            if (card.classList.value.includes('matched')) {
+                matched++;
+            }
         });
         if (matched >= cards.length) {
-            exitButton.click();
-        }
-    }
+            menuLoad();
+        };
+    };
+
+    function menuLoad() {
+        winMenu.style.display = 'flex';
+        cardGame.style.removeProperty('display')
+        exitButton.style.removeProperty('display');
+        resetBoard();
+    };
+
+    function removeMatched() {
+        for (i = 0; i < cards.length; i++) {
+            cards[i].classList.remove('matched');
+        };
+    };
 });

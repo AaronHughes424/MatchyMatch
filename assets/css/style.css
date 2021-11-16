@@ -39,6 +39,7 @@ body {
 }
 
 /*------------------ game menu styling */
+
 #rules-window,
 #game-menu {
     border-style: solid;
@@ -65,6 +66,8 @@ body {
     text-decoration: underline;
 }
 
+#play-button2,
+#menu-button2,
 #exit-button,
 #game-menu button,
 #rules-window button {
@@ -142,4 +145,29 @@ body {
 
 .card-front {
     transform: rotateY(180deg);
+}
+
+/*--------------------- Win Screen */
+.win-screen {
+    border-style: solid;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #D7BCE8;
+    height: 80%;
+    width: 80%;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: #5D576B 5px 5px 12px;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15% 10%;
+}
+
+.win-screen h1 {
+    text-decoration: underline;
 }
