@@ -134,7 +134,9 @@ window.addEventListener('load', function () {
             }
         });
         if (matched >= cards.length) {
-            menuLoad();
+            setTimeout(() => {
+                menuLoad();
+            }, 1000)
         };
     };
 
