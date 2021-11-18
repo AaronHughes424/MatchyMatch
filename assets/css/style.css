@@ -174,7 +174,23 @@ body {
 
 /* ----------- Card Grid Media Queries */
 
-@media (max-width:1020px) {
+@media (max-width:1024px) {
+    .card-grid {
+        width: 90%;
+        margin-left: 5%;
+
+    }
+}
+
+@media (max-width:1024px) {
+    .card {
+        width: 18%;
+        margin-left: 40px;
+
+    }
+}
+
+@media (max-width:425px) {
     .card {
         width: 30%;
         height: 40px;
