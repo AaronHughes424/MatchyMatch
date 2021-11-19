@@ -182,19 +182,20 @@ body {
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1024px) and (min-width:425px) {
     .card {
         width: 18%;
-        margin-left: 40px;
+        margin-left: 6%;
 
     }
 }
 
 @media (max-width:425px) {
     .card {
-        width: 30%;
-        height: 40px;
-        margin: 20px 5px;
+        width: 25%;
+        height: 50px;
+        margin-left: 7%;
+        margin-top: 8%;
         padding: 0;
     }
 }
