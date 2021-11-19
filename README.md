@@ -1,10 +1,8 @@
 <h1 align="center">Matchy Match</h1>
 
-[View the live project here.] 
+[View the live project here.](https://aaronhughes424.github.io/MatchyMatch/)
 
 This is my MS2 project called Matchy Match. It is a Interactive memory game which is really fun for the user to play. I have used HTML, CSS and Javascript to put this project together.
-
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
 
 ## User Experience (UX)
 
@@ -35,7 +33,7 @@ This is my MS2 project called Matchy Match. It is a Interactive memory game whic
 
 *   ### Wireframes
 
-    -   WebPage Wireframe - [View](https://github.com/)
+    -   WebPage Wireframe - [View](https://github.com/AaronHughes424/MatchyMatch/tree/main/assets/wireframes)
 
 ## Features
 
@@ -183,8 +181,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
 
 ### Content
 
