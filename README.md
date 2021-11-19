@@ -178,9 +178,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--   
+-   Most code was written by developer.
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   Some of the JavaScript To allow the card game to function I followed code from [Here](https://www.youtube.com/watch?v=ZniVgo8U7ek).
 
 ### Content
 
