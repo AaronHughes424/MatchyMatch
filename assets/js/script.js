@@ -12,13 +12,12 @@ window.addEventListener('load', function () {
 
     const menuButton = document.getElementById('menu-button');
 
-    const cardGame = document.getElementById('card-game')
-    const exitButton = document.getElementById('exit-button')
+    const cardGame = document.getElementById('card-game');
+    const exitButton = document.getElementById('exit-button');
     const cards = document.querySelectorAll('.card');
 
-    const winMenu = document.getElementById('win')
-    const menuButton2 = document.getElementById('menu-button2')
-    const playAgain = document.getElementById('play-button2')
+    const winMenu = document.getElementById('win');
+    const menuButton2 = document.getElementById('menu-button2');
 
     let flippedCard = false;
     let lockBoard = false;
@@ -32,18 +31,18 @@ window.addEventListener('load', function () {
         removeMatched();
         startFunction();
         shuffle();
-    })
+    });
 
     rulesButton.addEventListener('click', () => {
         gameMenu.style.display = 'none';
         rulesWindow.style.display = 'flex';
-    })
+    });
 
 
     menuButton.addEventListener('click', () => {
         rulesWindow.style.removeProperty('display');
         gameMenu.style.removeProperty('display');
-    })
+    });
 
     // game function area
 
@@ -57,7 +56,7 @@ window.addEventListener('load', function () {
 
     menuButton2.addEventListener('click', () => {
         gameMenu.style.removeProperty('display');
-        winMenu.style.removeProperty('display')
+        winMenu.style.removeProperty('display');
         exitButton.style.removeProperty('display');
 
         resetCards();
@@ -114,12 +113,12 @@ window.addEventListener('load', function () {
             let randomPos = Math.floor(Math.random() * 12);
             card.style.order = randomPos;
         });
-    };
+    }
 
     function resetCards() {
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.remove('flip');
-        };
+        }
     }
 
     function startFunction() {
@@ -136,20 +135,20 @@ window.addEventListener('load', function () {
         if (matched >= cards.length) {
             setTimeout(() => {
                 menuLoad();
-            }, 1000)
-        };
-    };
+            }, 1000);
+        }
+    }
 
     function menuLoad() {
         winMenu.style.display = 'flex';
-        cardGame.style.removeProperty('display')
+        cardGame.style.removeProperty('display');
         exitButton.style.removeProperty('display');
         resetBoard();
-    };
+    }
 
     function removeMatched() {
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.remove('matched');
-        };
-    };
+        }
+    }
 });
