@@ -33,6 +33,8 @@ This is my MS2 project called Matchy Match. It is a Interactive memory game whic
 
 *   ### Wireframes
 
+    -   Mobile Wireframe - [View]()
+
     -   WebPage Wireframe - [View](https://github.com/AaronHughes424/MatchyMatch/tree/main/assets/wireframes)
 
 ## Features
@@ -64,11 +66,11 @@ This is my MS2 project called Matchy Match. It is a Interactive memory game whic
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
--   [W3C JavaScript Validator]()
+-   [JSHint JavaScript Validator](https://jshint.com/)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -124,7 +126,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   There was a bug where after playing the first game and playing again it only took 1 match to wint - Resolved.
+-   There was a bug where after playing the first game and playing again it only took 1 match to win - Resolved.
 
 ## Deployment
 
@@ -182,11 +184,15 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   Some of the JavaScript To allow the card game to function I followed code from [Here](https://www.youtube.com/watch?v=ZniVgo8U7ek).
 
+-   Found code for timere on Stack overflow [Here](https://stackoverflow.com/questions/31559469/how-to-create-a-simple-javascript-timer)
+
 ### Content
 
 -   Most content was written be developer.
 
 -   Some of the JavaScript To allow the card game to function I followed code from [Here](https://www.youtube.com/watch?v=ZniVgo8U7ek).
+
+-   Followed Code institue example for README.md
 
 ### Media
 
