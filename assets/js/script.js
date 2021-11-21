@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
 
         removeMatched();
         startFunction();
+        timer();
         shuffle();
     });
 
@@ -123,6 +124,7 @@ window.addEventListener('load', function () {
 
     function startFunction() {
         cards.forEach(card => card.addEventListener('click', flipCard));
+
     }
 
     function checkGameOver() {
@@ -150,5 +152,15 @@ window.addEventListener('load', function () {
         for (i = 0; i < cards.length; i++) {
             cards[i].classList.remove('matched');
         }
+    }
+
+    // Timer
+
+    function timer() {
+        let sec = 0;
+        let timer = setInterval(function () {
+            document.getElementById("timer").innerHTML = 'Time: ' + sec;
+            sec++;
+        }, 1000);
     }
 });

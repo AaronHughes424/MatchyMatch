@@ -199,3 +199,13 @@ body {
         padding: 0;
     }
 }
+
+/*  --------------- Timer */
+
+#timer {
+    display: flex;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-family: 'Nunito', sans-serif;
+}
