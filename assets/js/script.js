@@ -19,6 +19,8 @@ window.addEventListener('load', function () {
     const winMenu = document.getElementById('win');
     const menuButton2 = document.getElementById('menu-button2');
 
+    const timerElement = document.getElementById("timer");
+
     let flippedCard = false;
     let lockBoard = false;
     let firstCard, secondCard;
@@ -28,6 +30,7 @@ window.addEventListener('load', function () {
         cardGame.style.display = 'flex';
         exitButton.style.display = 'flex';
 
+        timerElement.textContent = 'Time: 0';
         removeMatched();
         startFunction();
         timer();
@@ -53,6 +56,7 @@ window.addEventListener('load', function () {
         exitButton.style.removeProperty('display');
         removeMatched();
         resetCards();
+        stopTimer();
     });
 
     menuButton2.addEventListener('click', () => {
@@ -135,6 +139,7 @@ window.addEventListener('load', function () {
             }
         });
         if (matched >= cards.length) {
+            stopTimer();
             setTimeout(() => {
                 menuLoad();
             }, 1000);
@@ -155,12 +160,18 @@ window.addEventListener('load', function () {
     }
 
     // Timer
+    let timerInstance;
 
     function timer() {
-        let sec = 0;
-        let timer = setInterval(function () {
-            document.getElementById("timer").innerHTML = 'Time: ' + sec;
+        let sec = 1;
+        timerInstance = setInterval(function () {
+            timerElement.innerHTML = 'Time: ' + sec;
+            document.getElementById("timerComplete").textContent = sec;
             sec++;
         }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInstance);
     }
 });
